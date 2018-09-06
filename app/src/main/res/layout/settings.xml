@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <CheckBox
+      android:id="@+id/kiosk_check"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Kiosk Mode"
+      android:textSize="20dp"
+      />
+
+  <CheckBox
+      android:id="@+id/payments_check"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Charge $1 for pictures"
+      android:textSize="20dp"
+      />
+
+  <CheckBox
+      android:id="@+id/http_log_check"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Log http headers"
+      android:textSize="20dp"
+      />
+
+  <EditText
+      android:id="@+id/payments_amount"
+      android:inputType="numberDecimal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:hint="Amount"
+      />
+
+  <EditText
+      android:id="@+id/tweet_message"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:hint="Tweet message"
+      />
+
+  <TextView
+      android:id="@+id/twitter_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      />
+
+  <com.twitter.sdk.android.core.identity.TwitterLoginButton
+      android:id="@+id/twitter_login_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      />
+
+  <Button
+      android:id="@+id/twitter_logout_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Logout from Twitter"
+      android:textSize="20dp"
+      />
+
+  <TextView
+      android:id="@+id/readerSdk_login_state"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:textSize="20dp"
+      />
+
+  <Button
+      android:id="@+id/readerSdk_login_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="32dp"
+      android:text="Login"
+      />
+
+  <Button
+      android:id="@+id/readerSdk_logout_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="32dp"
+      android:text="Logout"
+      />
+
+  <Button
+      android:id="@+id/readerSdk_connect_reader_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="32dp"
+      android:text="Connect Reader"
+      />
+
+</LinearLayout>

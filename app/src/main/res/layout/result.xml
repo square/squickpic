@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".result.DisplayPictureActivity"
+    >
+
+  <ImageView
+      android:id="@+id/picture"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:scaleType="fitCenter"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_gravity="bottom"
+      android:layout_marginBottom="96dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      >
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Try again"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        app:backgroundTint="#ff0000"
+        android:layout_marginEnd="4dp"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/print"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        android:text="Print"
+        app:backgroundTint="@color/reader_blue"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/print_tweet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        android:text="Print &amp; Tweet"
+        app:backgroundTint="@color/reader_blue"
+        />
+
+  </LinearLayout>
+
+
+</FrameLayout>

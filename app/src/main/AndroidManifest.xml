@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="auto"
+    package="com.squareup.photobooth">
+
+  <uses-feature android:name="android.hardware.camera"/>
+
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+  <!-- Permissions for OAuth -->
+  <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <!-- Needed to store pictures on disk. -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+  <application
+      android:name="com.squareup.photobooth.App"
+      android:allowBackup="true"
+      android:hardwareAccelerated="true"
+      android:icon="@drawable/icon"
+      android:label="SquickPic"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version"/>
+
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="face"/>
+
+    <activity
+        android:name="com.squareup.photobooth.snap.SnapActivity"
+        android:label="Snap"
+        android:screenOrientation="fullSensor"
+        android:theme="@style/Theme.Snap"
+        >
+    </activity>
+
+    <activity
+        android:name="com.squareup.photobooth.oauth.GoogleOAuthActivity"
+        android:label="OAuth">
+    </activity>
+
+    <activity
+        android:name="com.squareup.photobooth.printer.PrinterSetupActivity"
+        android:label="Printer Setup"
+        android:theme="@style/Theme.AppCompat.Light">
+    </activity>
+
+    <activity
+        android:name="com.squareup.photobooth.result.DisplayPictureActivity"
+        android:theme="@style/Theme.Kiosk"
+        android:label="Display photobooth picture">
+    </activity>
+
+    <activity
+        android:name="com.squareup.photobooth.MainActivity"
+        android:label="Photobooth">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.squareup.photobooth.settings.SettingsActivity"
+        android:label="Photobooth Settings">
+    </activity>
+
+    <service
+        android:name=".job.JobService"
+        android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service
+        android:name=".job.GcmJobService"
+        android:exported="true"
+        android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+      <intent-filter>
+        <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+      </intent-filter>
+    </service>
+    <activity
+        android:name=".settings.StartAuthorizeActivity"/>
+
+    <activity android:name=".settings.ManualCodeEntryActivity"/>
+
+    <activity android:name=".settings.AuthorizingActivity"/>
+
+    <activity android:name=".settings.ScanQRCodeActivity"/>
+
+    <activity
+        android:name=".start.KioskStartActivity"
+        android:theme="@style/Theme.Kiosk"
+        android:label="Welcome">
+    </activity>
+
+  </application>
+
+</manifest>

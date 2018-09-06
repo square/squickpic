@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/entire_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="@dimen/kiosk_start_title_top"
+      android:textSize="@dimen/kiosk_start_title_size"
+      android:textColor="#fff"
+      android:text="@string/app_name"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:text="@string/touch_screen"
+      android:textSize="@dimen/kiosk_start_subtitle_size"
+      android:gravity="center"
+      android:textColor="@color/reader_blue"
+      android:layout_gravity="center_horizontal"
+      />
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/reader"
+      android:layout_gravity="center_horizontal"
+      />
+</LinearLayout>
+
+

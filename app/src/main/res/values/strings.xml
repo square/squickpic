@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ok">OK</string>
+  <string name="app_name">SquickPic</string>
+  <string name="authorization_code_hint">Authorization code</string>
+  <string name="authorize_button">Authorize</string>
+  <string name="cancel_button">Cancel</string>
+  <string name="cannot_deauthorize_dialog_message">There are Square payments on this device that need to be uploaded. Please ensure you are connected to the Internet.</string>
+  <string name="cannot_deauthorize_dialog_title">Unable to deauthorize</string>
+  <string name="checkout_canceled_toast">Checkout canceled</string>
+  <string name="enter_authorization_code">Enter an authorization code.</string>
+  <string name="error_dialog_title">Error</string>
+  <string name="generate_auth_code">Generate an authorization code in the Reader SDK tab in the Developer Portal.</string>
+  <string name="manual_code_entry">Enter Code Manually</string>
+  <string name="network_error_dialog_title">Network error</string>
+  <string name="not_authorized">Authorize Reader SDK.</string>
+  <string name="not_supported_emulator">Not supported on emulator.</string>
+  <string name="permission_request">Camera permission is required to display the camera preview.</string>
+  <string name="retry_button">Retry</string>
+  <string name="scan_qr_code">Scan QR Code</string>
+  <string name="scan_qr_code_title">Scan the QR Code.</string>
+  <string name="touch_screen">Touch the screen to start</string>
+  <string name="app_task_locked">App task is locked</string>
+</resources>

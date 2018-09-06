@@ -1,0 +1,25 @@
+buildscript {
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.1.4'
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    maven {
+      url "https://sdk.squareup.com/android"
+      credentials {
+        // username 'REPOSITORY_USERNAME_PROVIDED_BY_SQUARE'
+        // password 'REPOSITORY_PASSWORD_PROVIDED_BY_SQUARE'
+        username SQUARE_READER_SDK_APPLICATION_ID
+        password SQUARE_READER_SDK_REPOSITORY_PASSWORD
+      }
+    }
+    jcenter()
+  }
+}
